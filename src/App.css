@@ -1,10 +1,50 @@
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
+  font-family: "Cafe24SsurroundAir";
   text-align: center;
+}
+
+.App h3 {
+  cursor: pointer;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.black-nav {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  color: white;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.list {
+  margin-top: 30px;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.list span {
+  cursor: pointer;
+}
+
+.modal {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #eee;
 }
 
 @media (prefers-reduced-motion: no-preference) {
