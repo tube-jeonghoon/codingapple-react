@@ -10,6 +10,7 @@ function App() {
   let [good, chGood] = useState(0);
   let [modal, chModal] = useState(true);
   let [inputNumber, chInputNumber] = useState(0);
+  let [inputString, chInputString] = useState("");
 
   return (
     <div className="App">
@@ -19,7 +20,7 @@ function App() {
 
       {title.map(function (title, i) {
         return (
-          <div className="list">
+          <div className="list" key={i}>
             <h3
               onClick={() => {
                 chInputNumber(i);
@@ -40,6 +41,31 @@ function App() {
           </div>
         );
       })}
+
+      <div className="publish">
+        <input
+          onChange={(e) => {
+            chInputString(e.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            let arrayCopy = [...title];
+            arrayCopy.unshift(inputString);
+            chTitle(arrayCopy);
+          }}
+        >
+          저장
+        </button>
+      </div>
+
+      {/* <input
+        onChange={(e) => {
+          chInputString(e.target.value);
+        }}
+      />
+      <br />
+      {inputString} */}
 
       {modal === true ? (
         <Modal title={title} inputNumber={inputNumber} />
